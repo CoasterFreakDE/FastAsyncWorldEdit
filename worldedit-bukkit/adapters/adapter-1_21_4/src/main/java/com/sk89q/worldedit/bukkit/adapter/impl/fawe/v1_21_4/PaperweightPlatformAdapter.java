@@ -354,7 +354,7 @@ public final class PaperweightPlatformAdapter extends NMSAdapter {
         MinecraftServer.getServer().execute(() -> {
             try {
                 ChunkPos pos = levelChunk.getPos();
-                // NOTE: the ClientboundForgetLevelChunkPacket packet is required on 1.21.3
+                // NOTE: the ClientboundForgetLevelChunkPacket packet is required on 1.21.4
                 // as the client won't update empty -> non-empty sections properly otherwise
                 ClientboundForgetLevelChunkPacket forget = new ClientboundForgetLevelChunkPacket(pos);
                 ClientboundLevelChunkWithLightPacket packet;
